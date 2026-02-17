@@ -1,0 +1,147 @@
+/* Styles for the horizontal panel and course cards */
+.horizontal-panel {
+    display: flex;
+    overflow-x: auto; /* Allows horizontal scrolling */
+    padding: 20px;
+    gap: 20px; /* Space between cards */
+    scroll-behavior: smooth; /* Smooth scrolling */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS devices */
+    background-color: #f8f9fa; /* Light background for contrast */
+    align-items: center; /* Vertically center cards */
+}
+
+/* Styles for the navigation buttons */
+.navigation-buttons {
+    display: flex;
+    justify-content: center; /* Center navigation buttons */
+    margin: 20px 0;
+}
+
+.navigation-buttons button {
+    padding: 12px 20px;
+    background-color: #007bff; /* Blue background for buttons */
+    color: #fff; /* White text color */
+    border: none;
+    border-radius: 8px; /* More rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth color and scale transitions */
+    font-size: 1rem; /* Adjusted font size */
+}
+
+.navigation-buttons button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.course-card {
+    width: 310px; /* Fixed width for uniformity */
+    height: auto; /* Adjust height to auto for better content fit */
+    background-color: #fff; /* White background for cards */
+    border: 1px solid #ddd; /* Light border around cards */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    overflow: hidden; /* Ensure content stays within the card */
+    flex: 0 0 auto; /* Prevents the cards from shrinking */
+    transition: transform 0.3s ease; /* Smooth animation on hover */
+}
+
+.course-card:hover {
+    transform: scale(1.03); /* Slight zoom effect on hover */
+}
+
+.course-card img {
+    width: 100%; /* Full width for the image */
+    height: 50%; /* Adjusted height for the image */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+}
+
+.course-card-content {
+    padding: 15px; /* Increased padding for better spacing */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 60px); /* Adjusted height to ensure content fits well */
+}
+
+.course-card-title {
+    font-size: 1.25rem; /* Adjusted font size for the title */
+    color: #333; /* Dark text color */
+    margin-bottom: 8px;
+}
+
+.course-card-description {
+    font-size: 0.9rem; /* Adjusted font size for the description */
+    color: #666; /* Gray text color */
+    margin-bottom: 10px;
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Add ellipsis for overflow text */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3; /* Limit the description to 3 lines */
+}
+
+.course-card-duration,
+.course-card-fee {
+    font-size: 0.85rem; /* Font size for details */
+    color: #555; /* Medium dark text color */
+    margin-bottom: 4px;
+}
+
+.register-button {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #007bff; /* Blue background for button */
+    color: #fff; /* White text color */
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px; /* More rounded corners */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth color and scale transitions */
+    font-size: 1rem; /* Adjusted font size */
+    margin-top: auto; /* Align button to the bottom */
+    margin-bottom: 10px; /* Ensure some space below the button */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .horizontal-panel {
+        padding: 10px; /* Less padding on smaller screens */
+    }
+
+    .course-card {
+        width: 250px; /* Smaller width for smaller screens */
+    }
+
+    .course-card img {
+        height: 40%; /* Adjusted height for the image */
+    }
+    
+    .course-card-description {
+        font-size: 0.8rem; /* Smaller font size for descriptions */
+    }
+
+    .navigation-buttons button {
+        font-size: 0.9rem; /* Smaller font size for buttons */
+    }
+}
+
+@media (max-width: 480px) {
+    .horizontal-panel {
+        padding: 5px; /* Minimal padding on very small screens */
+    }
+
+    .course-card {
+        width: 200px; /* Even smaller width for mobile screens */
+    }
+
+    .course-card img {
+        height: 35%; /* Further reduced height for mobile screens */
+    }
+
+    .course-card-description {
+        font-size: 0.75rem; /* Further reduced font size for descriptions */
+    }
+
+    .navigation-buttons button {
+        font-size: 0.8rem; /* Even smaller font size for buttons */
+    }
+}

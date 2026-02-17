@@ -1,0 +1,460 @@
+/* Reset some default styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* body*/
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+
+/* Header */
+
+header {
+    background-color: ghostwhite;
+    color: black;
+    padding: 1em 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* Logo */
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 115px;
+    margin-right: -2em;
+}
+
+.school-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+.no-space {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    border: none;
+}
+
+.school-name hr {
+    border: none;
+    border-top: 1px solid black;
+    margin-top: 0.2em;
+    width: 120px;
+}
+
+
+/* Navigation and hamburger positioning */
+
+nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 1em;
+    position: relative;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background: black;
+    margin: 4px 0;
+    border-radius: 5px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+    .hamburger {
+        display: flex;
+    }
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: ghostwhite;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 100%;
+        padding: 1em;
+    }
+    nav ul.active {
+        display: flex;
+    }
+    nav ul li {
+        margin: 1em 0;
+    }
+}
+
+
+/* Hero section */
+
+#hero {
+    background-image: url('images/front.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: relative;
+}
+
+.hero-text {
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+#hero button {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 15px;
+    padding: 1em 2em;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 1em;
+}
+
+#hero button:hover {
+    background-color: #45A049;
+}
+
+
+/* About us section*/
+
+#about {
+    padding: 2em;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+#about h2 {
+    margin-bottom: 1em;
+}
+
+#about p {
+    margin-bottom: 1em;
+}
+
+
+/* Courses section  */
+
+#courses {
+    padding: 2em;
+}
+
+#courses h2 {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.course {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1em;
+    margin-bottom: 1em;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.course:hover {
+    transform: scale(1.05);
+    border-color: #4CAF50;
+}
+
+.course h3 {
+    margin-bottom: 0.5em;
+}
+
+.course p {
+    margin-bottom: 0.5em;
+}
+
+.course button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+}
+
+.course button:hover {
+    background-color: #45A049;
+}
+
+
+/* Enrollment form section */
+
+#enroll {
+    padding: 2em;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+#enroll h2 {
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+}
+
+
+/* Admissions*/
+
+#admissions {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+#apply,
+#blog,
+#contact {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+section h2,
+section p {
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 0.5em 1em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45A049;
+}
+
+
+/* Programmes  */
+
+#programmes {
+    padding: 2em;
+    background-color: #f4f4f4;
+}
+
+#programmes h2 {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.department-card {
+    margin-bottom: 2em;
+    padding: 1em;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.department-card h3 {
+    color: #333;
+    margin-bottom: 1em;
+}
+
+.courses-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1em;
+}
+
+.course-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1em;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.course-card img {
+    max-width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 0.5em;
+}
+
+.course-card h4 {
+    color: #4CAF50;
+    margin-bottom: 0.5em;
+}
+
+.course-card p {
+    color: #666;
+}
+
+
+/* Short Courses Section Styles */
+
+#short-courses {
+    padding: 2em;
+    background-color: aliceblue;
+}
+
+#short-courses h2 {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+#short-courses .card {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1em;
+    margin-bottom: 1em;
+    transition: transform 0.3s;
+}
+
+#short-courses .card:hover {
+    transform: scale(1.05);
+    border-color: #4CAF50;
+}
+
+#short-courses .card h3 {
+    background-color: #fff;
+    color: #D32F2F;
+    padding: 0.5em;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 0.5em;
+    border-radius: 3px 3px 0 0;
+}
+
+#short-courses .card p {
+    margin-bottom: 0.5em;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1em;
+    margin-bottom: 1em;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    border-color: #4CAF50;
+}
+
+.card h3 {
+    background-color: #D32F2F;
+    color: white;
+    padding: 0.5em;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 0.5em;
+    border-radius: 3px 3px 0 0;
+}
+
+.card p {
+    margin-bottom: 0.5em;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+}
+
+footer p a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+footer p a:hover {
+    text-decoration: underline;
+}
